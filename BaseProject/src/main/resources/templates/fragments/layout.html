@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
 <head>
     <!--
         ===
@@ -22,7 +24,7 @@
     <meta name="author" content="Muhammad Usman"/>
 
     <!-- The styles -->
-    <link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet"/>
+    <link id="bs-css" href="css/bootstrap-lumen.min.css" rel="stylesheet"/>
 
     <link href="css/charisma-app.css" rel="stylesheet"/>
     <link href='bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'/>
@@ -55,7 +57,7 @@
 <body>
     <!-- topbar starts -->
     <div class="navbar navbar-default" role="navigation">
-		<div th:replace="fragments/navbar :: navbar"></div>
+		<div th:replace="fragments/navbar :: bar"></div>
     </div>
     <!-- topbar ends -->
 <div class="ch-container">
@@ -63,7 +65,7 @@
         
         <!-- left menu starts -->
         <div class="col-sm-2 col-lg-2">
-            <div th:replace="fragments/left-menu :: left-menu"></div>
+            <div th:replace="fragments/menu :: menuLeft"></div>
         </div>
         <!--/span-->
         <!-- left menu ends -->

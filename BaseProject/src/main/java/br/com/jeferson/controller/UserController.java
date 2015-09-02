@@ -5,12 +5,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/BaseProject")
-public class BaseController {
+public class UserController {
 
 	
-	@RequestMapping({"/", "/index", "/home"} )
-	public String index() {
-		return "index";
+	@RequestMapping("/admin/users")
+	public String users() {
+		return "admin/users";
 	}
 	
 }
