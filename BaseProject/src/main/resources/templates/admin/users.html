@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" 
+	layout:decorator="fragments/layout" >
+
+<div layout:fragment="content"> 
+	<div>
+	    <ul class="breadcrumb">
+	        <li>
+	            <a href="#">Home</a>
+	        </li>
+	        <li>
+	            <a href="#">Administra&ccedil;&atilde;o</a>
+	        </li>
+	        <li>
+	            <a href="admin/usuarios">Usu&aacute;rios</a>
+	        </li>
+	    </ul>
+	</div>
+
+	<div class="row">
+        <div class="box col-md-12">
+            <div class="box-inner">
+                <div class="box-header well" data-original-title="">
+                    <h2><i class="glyphicon glyphicon-user"></i> Usu&aacute;rios</h2>
+                    <div class="box-icon">
+                        <a href="#" class="btn btn-setting btn-round btn-default"><i class="glyphicon glyphicon-cog"></i></a>
+                        <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                                class="glyphicon glyphicon-chevron-up"></i></a>
+                        <a href="#" class="btn btn-close btn-round btn-default"><i class="glyphicon glyphicon-remove"></i></a>
+                    </div>
+                </div>
+                <div class="box-content">
+				    <table class="table table-striped table-bordered bootstrap-datatable datatable responsive">
+					    <thead>
+					    <tr>
+					        <th>Username</th>
+					        <th>Birth</th>
+					        <th>--</th>
+					        <th>--</th>
+					        <th>--</th>
+					    </tr>
+					    </thead>
+					    <tbody>
+					    <tr th:each="user : ${users}">
+					        <td th:text="${user.name}">Onions</td>
+					        <td class="center" th:text="${user.birth}">01/01/1980</td>
+					        <td class="center"></td>
+					        <td class="center">
+					            <span class="label-success label label-default">Active</span>
+					        </td>
+					        <td class="center">
+					            <a class="btn btn-success" href="#">
+					                <i class="glyphicon glyphicon-zoom-in icon-white"></i>
+					                View
+					            </a>
+					            <a class="btn btn-info" href="#">
+					                <i class="glyphicon glyphicon-edit icon-white"></i>
+					                Edit
+					            </a>
+					            <a class="btn btn-danger" href="#">
+					                <i class="glyphicon glyphicon-trash icon-white"></i>
+					                Delete
+					            </a>
+					        </td>
+					    </tr>
+				    </tbody>
+				    </table>
+				</div>
+			</div>
+		</div>					    
+	</div>
+</div>
+</html>

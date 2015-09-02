@@ -10,7 +10,7 @@ public class BaseController {
 	
 	@RequestMapping({"/", "/index", "/home"} )
 	public String index() {
-		return "usuario";
+		return "index";
 	}
 	
 }

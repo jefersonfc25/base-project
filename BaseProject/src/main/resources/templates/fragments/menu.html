@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 
-<div class="sidebar-nav" th:fragment="left-menu">
+<div class="sidebar-nav" th:fragment="menuLeft">
     <div class="nav-canvas">
         <div class="nav-sm nav nav-stacked">
 
         </div>
         <ul class="nav nav-pills nav-stacked main-menu">
             <li class="nav-header">Main</li>
-            <li><a class="ajax-link" href="index.html"><i class="glyphicon glyphicon-home"></i><span> Dashboard</span></a>
+            <li><a class="ajax-link" href="index.html"><i class="glyphicon glyphicon-home"></i><span> Dashboard</span></a></li>
+            <li class="accordion">
+                <a href="#"><i class="glyphicon glyphicon-plus"></i><span> Administra&ccedil;&atilde;o</span></a>
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="admin/users">Usu&aacute;rio</a></li>
+                    <li><a href="#">Child Menu 2</a></li>
+                </ul>
             </li>
             <li><a class="ajax-link" href="ui.html"><i class="glyphicon glyphicon-eye-open"></i><span> UI Features</span></a>
             </li>
@@ -23,13 +30,7 @@
             <li class="nav-header hidden-md">Sample Section</li>
             <li><a class="ajax-link" href="table.html"><i
                         class="glyphicon glyphicon-align-justify"></i><span> Tables</span></a></li>
-            <li class="accordion">
-                <a href="#"><i class="glyphicon glyphicon-plus"></i><span> Accordion Menu</span></a>
-                <ul class="nav nav-pills nav-stacked">
-                    <li><a href="#">Child Menu 1</a></li>
-                    <li><a href="#">Child Menu 2</a></li>
-                </ul>
-            </li>
+            
             <li><a class="ajax-link" href="calendar.html"><i class="glyphicon glyphicon-calendar"></i><span> Calendar</span></a>
             </li>
             <li><a class="ajax-link" href="grid.html"><i
