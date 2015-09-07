@@ -45,7 +45,11 @@ $(document).ready(function () {
         if (themeName == 'classic') {
             $('#bs-css').attr('href', '/bower_components/bootstrap/dist/css/bootstrap.min.css');
         } else {
+<<<<<<< HEAD
         	$('#bs-css').attr('href', '/css/bootstrap-' + themeName + '.min.css');
+=======
+        	$('#bs-css').attr('href', 'css/bootstrap-' + themeName + '.min.css');
+>>>>>>> origin/master
         }
 
         $('#themes i').removeClass('glyphicon glyphicon-ok whitespace').addClass('whitespace');
