@@ -3,11 +3,9 @@ $(document).ready(function () {
     //default theme(CSS) is lumen, change it if needed
     var defaultTheme = 'lumen';
 
-//    var currentTheme = $.cookie('currentTheme') == null ? defaultTheme : $.cookie('currentTheme');
     var msie = navigator.userAgent.match(/msie/i);
     $.browser = {};
     $.browser.msie = {};
-//    switchTheme(currentTheme);
 
     $('.navbar-toggle').click(function (e) {
         e.preventDefault();
@@ -33,24 +31,6 @@ $(document).ready(function () {
     });
 
 
-//    $('#themes a').click(function (e) {
-//        e.preventDefault();
-//        currentTheme = $(this).attr('data-value');
-//        $.cookie('currentTheme', currentTheme, {expires: 365});
-//        switchTheme(currentTheme);
-//    });
-
-
-//    function switchTheme(themeName) {
-//        if (themeName == 'classic') {
-//            $('#bs-css').attr('href', 'bower_components/bootstrap/dist/css/bootstrap.min.css');
-//        } else {
-//        	$('#bs-css').attr('href', 'css/bootstrap-' + themeName + '.min.css');
-//        }
-//
-//        $('#themes i').removeClass('glyphicon glyphicon-ok whitespace').addClass('whitespace');
-//        $('#themes a[data-value=' + themeName + ']').find('i').removeClass('whitespace').addClass('glyphicon glyphicon-ok');
-//    }
 
     //ajax menu checkbox
     $('#is-ajax').click(function (e) {
